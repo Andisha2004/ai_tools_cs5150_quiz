@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useDiagram, useSettings } from "../hooks";
 import { useTranslation } from "react-i18next";
 
