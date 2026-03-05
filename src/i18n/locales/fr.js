@@ -39,6 +39,7 @@ const fr = {
     paste: "Coller",
     duplicate: "Dupliquer",
     delete: "Supprimer",
+    delete_all_fields: "Supprimer tous les champs",
     copy_as_image: "Copier en tant qu'image",
     view: "Vue",
     header: "Barre de menu",
@@ -218,6 +219,9 @@ const fr = {
     delete_relationship: "Supprimer la relation {{refName}}",
     not_found: "Non trouvé",
     readme: "README",
+    stats_box: "Statistiques du diagramme",
+    fields: "Champs",
+    max_depth: "Profondeur max",
   },
 };
 
