@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Tab,
   ObjectType,
@@ -32,7 +32,7 @@ export default function Table({
   setLinkingLine,
 }) {
   const [hoveredField, setHoveredField] = useState(null);
-  const { database } = useDiagram();
+  const { database, deleteAllFields } = useDiagram();
   const { layout } = useLayout();
   const { deleteTable, deleteField, updateTable } = useDiagram();
   const { settings } = useSettings();
@@ -242,6 +242,16 @@ export default function Table({
                             </div>
                           )}
                         </div>
+                    <Button
+                      icon={<IconDeleteStroked />}
+                      type="danger"
+                      block
+                      style={{ marginTop: "8px" }}
+                      onClick={() => deleteAllFields(tableData.id)}
+                      disabled={layout.readOnly || tableData.fields.length === 0}
+                    >
+                      {t("delete_all_fields")}
+                    </Button>
                         <Button
                           icon={<IconDeleteStroked />}
                           type="danger"

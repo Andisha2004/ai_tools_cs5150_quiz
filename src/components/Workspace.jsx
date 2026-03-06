@@ -18,6 +18,7 @@ import {
   useEnums,
 } from "../hooks";
 import FloatingControls from "./FloatingControls";
+import StatsBox from "./StatsBox";
 import LayoutStatsBox from "./LayoutStatsBox";
 import { Button, Modal, Tag } from "@douyinfe/semi-ui";
 import { IconAlertTriangle } from "@douyinfe/semi-icons";
@@ -492,6 +493,7 @@ export default function WorkSpace() {
           <CanvasContextProvider className="h-full w-full">
             <Canvas saveState={saveState} setSaveState={setSaveState} />
           </CanvasContextProvider>
+          <StatsBox />
           <div className="absolute left-4 bottom-4 pointer-events-none z-10">
             <LayoutStatsBox />
           </div>
