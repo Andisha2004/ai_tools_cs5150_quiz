@@ -19,6 +19,7 @@ import {
 } from "../hooks";
 import FloatingControls from "./FloatingControls";
 import StatsBox from "./StatsBox";
+import LayoutStatsBox from "./LayoutStatsBox";
 import { Button, Modal, Tag } from "@douyinfe/semi-ui";
 import { IconAlertTriangle } from "@douyinfe/semi-icons";
 import { useTranslation } from "react-i18next";
@@ -493,6 +494,9 @@ export default function WorkSpace() {
             <Canvas saveState={saveState} setSaveState={setSaveState} />
           </CanvasContextProvider>
           <StatsBox />
+          <div className="absolute left-4 bottom-4 pointer-events-none z-10">
+            <LayoutStatsBox />
+          </div>
           {version && (
             <div className="absolute right-8 top-2 space-x-2">
               <Button
